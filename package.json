@@ -6,12 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed:demo": "tsx --env-file=.env.local scripts/seed-demo.ts",
+    "test:phase1": "tsx --env-file=.env.local scripts/test-phase1.ts",
+    "test:phase2": "tsx --env-file=.env.local scripts/test-phase2.ts"
   },
   "dependencies": {
+    "lucide-react": "^1.64.0",
+    "mongoose": "^9.11.4",
+    "neo4j-driver": "^6.3.0",
     "next": "16.4.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
@@ -21,6 +28,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
