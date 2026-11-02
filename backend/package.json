@@ -1,0 +1,35 @@
+{
+  "name": "trustroute-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TrustRoute - AI-Powered Secure Cross-Border Payment Router REST API",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "seed:demo": "tsx --env-file=.env scripts/seed-demo.ts",
+    "test:phase1": "tsx --env-file=.env scripts/run-tests.ts scripts/test-phase1.ts",
+    "test:phase2": "tsx --env-file=.env scripts/run-tests.ts scripts/test-phase2.ts",
+    "test:phase1:direct": "tsx --env-file=.env scripts/test-phase1.ts",
+    "test:phase2:direct": "tsx --env-file=.env scripts/test-phase2.ts",
+    "test:camara": "tsx --env-file=.env scripts/test-camara-service.ts",
+    "check:camara": "tsx --env-file=.env scripts/test-camara-connectivity.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^9.11.4",
+    "neo4j-driver": "^6.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.17.19",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
+

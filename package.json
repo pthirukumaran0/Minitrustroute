@@ -1,34 +1,18 @@
 {
-  "name": "miniproject",
-  "version": "0.1.0",
+  "name": "trustroute",
+  "version": "1.0.0",
   "private": true,
+  "description": "TrustRoute - AI-Powered Secure Cross-Border Payment Router",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "seed:demo": "tsx --env-file=.env.local scripts/seed-demo.ts",
-    "test:phase1": "tsx --env-file=.env.local scripts/test-phase1.ts",
-    "test:phase2": "tsx --env-file=.env.local scripts/test-phase2.ts"
-  },
-  "dependencies": {
-    "lucide-react": "^1.64.0",
-    "mongoose": "^9.11.4",
-    "neo4j-driver": "^6.3.0",
-    "next": "16.4.3",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
-    "zod": "^4.6.7"
-  },
-  "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.3",
-    "tailwindcss": "^4",
-    "tsx": "^4.23.15",
-    "typescript": "^5"
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "start:backend": "npm --prefix backend start",
+    "start:frontend": "npm --prefix frontend start",
+    "test:phase1": "npm --prefix backend run test:phase1",
+    "test:phase2": "npm --prefix backend run test:phase2",
+    "seed:demo": "npm --prefix backend run seed:demo"
   }
 }
